@@ -1,0 +1,21 @@
+# Hugo
+/public/
+/resources/_gen/
+/.hugo_build.lock
+hugo_stats.json
+
+# Firebase
+/.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# Node (nur für firebase-tools beim lokalen Deploy)
+/node_modules/
+
+# Betriebssystem / Editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

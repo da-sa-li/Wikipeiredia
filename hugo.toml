@@ -1,0 +1,147 @@
+# =============================================================================
+# Wikipeiredia — Hugo-Konfiguration
+#
+# Theme: Relearn 9.0.3 (als Git-Submodule unter themes/hugo-theme-relearn)
+# Alle Theme-Parameter sind dokumentiert unter:
+#   https://mcshelby.github.io/hugo-theme-relearn/configuration/
+# =============================================================================
+
+# Öffentliche Adresse der Seite. Bei eigener Domain hier anpassen
+# (und die Domain zusätzlich in der Firebase Console verbinden).
+baseURL = 'https://wikipeiredia.web.app/'
+
+title = 'Wikipeiredia'
+
+# --- Sprache -----------------------------------------------------------------
+# Das Wiki ist einsprachig deutsch. Relearn bringt deutsche Oberflächentexte
+# (themes/hugo-theme-relearn/i18n/de.toml) automatisch mit.
+defaultContentLanguage = 'de'
+locale = 'de-DE'          # seit Hugo 0.158 der Nachfolger von 'languageCode'
+timeZone = 'Europe/Berlin'
+
+theme = 'hugo-theme-relearn'
+
+# "Zuletzt geändert"-Datum aus der Git-Historie statt aus dem Front Matter.
+# Wichtig: Der CI-Build braucht dafür die volle Historie (fetch-depth: 0).
+enableGitInfo = true
+
+# Keine automatisch gekürzten Zusammenfassungen — im Wiki zählt der volle Text.
+summaryLength = 10
+
+[frontmatter]
+  lastmod = [':git', 'lastmod', 'date', 'publishDate']
+
+# --- Ausgabeformate ----------------------------------------------------------
+# 'print' aktiviert Relearns Druckansicht (ganzes Kapitel auf einer Seite).
+[outputs]
+  home    = ['html', 'rss', 'print']
+  section = ['html', 'rss', 'print']
+  page    = ['html', 'print']
+
+[taxonomies]
+  category = 'categories'
+  tag      = 'tags'
+
+# --- Markdown ----------------------------------------------------------------
+[markup]
+  [markup.highlight]
+    lineNumbersInTable = false
+    # false = CSS-Klassen statt fester Farben, damit Code-Highlighting
+    # der hellen bzw. dunklen Theme-Variante folgt.
+    noClasses = false
+
+  [markup.goldmark]
+    duplicateResourceFiles = true
+    [markup.goldmark.renderer]
+      # Von Relearn vorausgesetzt: viele Shortcodes geben HTML aus.
+      unsafe = true
+    [markup.goldmark.extensions]
+      strikethrough = false
+      # Zusatz-Syntax, die sich im Wiki-Alltag lohnt:
+      #   ~~weg~~  ++neu++  ==markiert==  H~2~O  x^2^
+      [markup.goldmark.extensions.extras.delete]
+        enable = true
+      [markup.goldmark.extensions.extras.insert]
+        enable = true
+      [markup.goldmark.extensions.extras.mark]
+        enable = true
+      [markup.goldmark.extensions.extras.subscript]
+        enable = true
+      [markup.goldmark.extensions.extras.superscript]
+        enable = true
+    [markup.goldmark.parser.attribute]
+      block = true
+
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel   = 4
+
+# =============================================================================
+# Theme-Parameter
+# =============================================================================
+[params]
+  # --- Erscheinungsbild ------------------------------------------------------
+  # Erste Variante ist die Voreinstellung; 'relearn-auto' folgt der
+  # Systemeinstellung des Besuchers. Über das Zahnrad in der Seitenleiste
+  # kann jede Variante gewählt werden.
+  themeVariant = [
+    { identifier = 'relearn-auto', name = 'Hell/Dunkel automatisch', auto = ['relearn-light', 'relearn-dark'] },
+    { identifier = 'relearn-light', name = 'Hell' },
+    { identifier = 'relearn-dark',  name = 'Dunkel' },
+    { identifier = 'zen-auto',      name = 'Zen Hell/Dunkel', auto = ['zen-light', 'zen-dark'] },
+    { identifier = 'neon',          name = 'Neon' },
+  ]
+
+  landingPageName = '<i class="fa-fw fas fa-home"></i> Startseite'
+  titleSeparator = '·'
+
+  # --- Navigation ------------------------------------------------------------
+  collapsibleMenu = true      # Seitenleiste als aufklappbarer Baum
+  alwaysopen      = false     # Nur den aktiven Zweig geöffnet lassen
+  ordersectionsby = 'weight'  # Reihenfolge über 'weight' im Front Matter
+  showVisitedLinks = true     # Häkchen an bereits gelesenen Seiten
+
+  # --- Seitenwerkzeuge -------------------------------------------------------
+  # "Diese Seite bearbeiten"-Link auf GitHub. Bei Umbenennung des Repos
+  # oder des Standard-Branches hier anpassen.
+  editURL = 'https://github.com/da-sa-li/Wikipeiredia/edit/main/content/${FilePath}'
+
+  disableBreadcrumb   = false
+  disableToc          = false
+  disableNextPrev     = false
+  disableSourceButton = true   # Markdown-Quelltext nicht zusätzlich ausliefern
+
+  # --- Metadaten unter dem Seitentitel ---------------------------------------
+  hideAuthorName  = false
+  hideAuthorEmail = true
+  hideAuthorDate  = false
+  dateFormat      = ':date_long'   # z. B. "3. September 2026"
+
+  # --- Bilder ----------------------------------------------------------------
+  imageEffects.border   = true
+  imageEffects.lazy     = true
+  imageEffects.lightbox = true
+
+  # --- Diagramme -------------------------------------------------------------
+  mermaidZoom = true
+
+  # Kaputte interne Links lassen den Build fehlschlagen, statt still
+  # ein totes Ziel auszuliefern.
+  link.errorlevel  = 'error'
+  image.errorlevel = 'error'
+
+  [params.author]
+    name = 'Wikipeiredia'
+
+# --- Verknüpfungen am Fuß der Seitenleiste -----------------------------------
+[[menu.shortcuts]]
+  pre  = '<i class="fa-fw fas fa-tags"></i> '
+  name = 'Schlagwörter'
+  pageRef = '/tags'
+  weight = 10
+
+[[menu.shortcuts]]
+  pre  = '<i class="fa-fw fab fa-github"></i> '
+  name = 'Repository'
+  url  = 'https://github.com/da-sa-li/Wikipeiredia'
+  weight = 20
