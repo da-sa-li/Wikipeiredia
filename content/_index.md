@@ -3,21 +3,11 @@ title = 'Wikipeiredia'
 type = 'home'
 +++
 
-Willkommen im Wiki. Hier sammeln wir Dokumentation, Anleitungen und
-Nachschlagewerke an einem Ort — versioniert in Git, durchsuchbar im Browser.
+## Externe Weblinks
 
-{{% notice style="tip" title="Schnell etwas finden?" %}}
-Über das Suchfeld links oben wird der gesamte Inhalt durchsucht.
-Mit <kbd>/</kbd> springt der Cursor direkt ins Suchfeld.
-{{% /notice %}}
+* [Acidgurkerl](https://youtu.be/cNBWwmm5dJk?si=9w_CBIVmkW_eO4S9)
+* [Tschu, Tschu](https://www.instagram.com/reel/CthJeBVgmvk/?igshid=NjFiZTE0ZDQ0ZQ==)
 
-## Bereiche
+## Navigation
 
 {{% children depth="2" description="true" %}}
-
-## Mitschreiben
-
-Jede Seite ist eine Markdown-Datei im Ordner `content/`. Über den
-Stift-Knopf oben rechts lässt sich jede Seite direkt auf GitHub bearbeiten.
-Wie das Ganze lokal läuft, steht unter
-[Neue Seite anlegen]({{% relref "anleitungen/neue-seite-anlegen" %}}).
