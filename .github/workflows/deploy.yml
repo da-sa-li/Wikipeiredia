@@ -27,10 +27,15 @@ jobs:
       - name: Repository auschecken
         uses: actions/checkout@v7
         with:
-          # Das Relearn-Theme hängt als Submodule unter themes/.
-          submodules: true
           # Volle Historie, damit enableGitInfo das Änderungsdatum je Seite kennt.
           fetch-depth: 0
+          # Submodule bewusst nicht hier: fetch-depth gilt auch für sie, und das
+          # Relearn-Repo wiegt mit kompletter Historie 1,2 GB (3.190 Commits).
+          # Der nächste Schritt holt stattdessen nur den angepinnten Commit.
+          submodules: false
+
+      - name: Theme-Submodule flach holen
+        run: git submodule update --init --depth 1
 
       - name: Hugo installieren
         run: |
