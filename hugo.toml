@@ -8,7 +8,7 @@
 
 # Öffentliche Adresse der Seite. Bei eigener Domain hier anpassen
 # (und die Domain zusätzlich in der Firebase Console verbinden).
-baseURL = 'https://wikipeiredia-393f3.web.app/'
+baseURL = 'https://wiki.fertigs.bike/'
 
 title = 'Wikipeiredia'
 
