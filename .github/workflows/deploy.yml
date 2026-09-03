@@ -27,10 +27,15 @@ jobs:
       - name: Repository auschecken
         uses: actions/checkout@v7
         with:
-          # Das Relearn-Theme hängt als Submodule unter themes/.
-          submodules: true
           # Volle Historie, damit enableGitInfo das Änderungsdatum je Seite kennt.
           fetch-depth: 0
+          # Submodule bewusst nicht hier: fetch-depth gilt auch für sie, und das
+          # Relearn-Repo wiegt mit kompletter Historie 1,2 GB (3.190 Commits).
+          # Der nächste Schritt holt stattdessen nur den angepinnten Commit.
+          submodules: false
+
+      - name: Theme-Submodule flach holen
+        run: git submodule update --init --depth 1
 
       - name: Hugo installieren
         run: |
@@ -46,11 +51,21 @@ jobs:
           TZ: Europe/Berlin
         run: ./scripts/check-build.sh
 
+      # Die ID wird aus .firebaserc abgeleitet statt hier wiederholt: eine
+      # Quelle der Wahrheit, und die Action kann trotzdem ihren Ergebnis-Link
+      # bauen (ohne projectId zeigt ihre Zusammenfassung auf https://.web.app/).
+      - name: Projekt-ID aus .firebaserc lesen
+        id: firebase
+        run: |
+          set -euo pipefail
+          PROJECT_ID="$(jq -er '.projects.default' .firebaserc)"
+          echo "Firebase-Projekt: $PROJECT_ID"
+          echo "project_id=$PROJECT_ID" >> "$GITHUB_OUTPUT"
+
       - name: Auf Firebase Hosting veröffentlichen
         uses: FirebaseExtended/action-hosting-deploy@v0.11.0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          # Kein projectId hier — die Action nimmt die ID aus .firebaserc.
-          # So steht sie an genau einer Stelle im Repo.
+          projectId: ${{ steps.firebase.outputs.project_id }}
           channelId: live
