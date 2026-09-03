@@ -147,8 +147,7 @@ Details und Alternativen stehen im Wiki unter
 
 Domain in der Firebase Console unter **Hosting → Eigene Domain hinzufügen**
 verbinden, anschließend die `baseURL` in `hugo.toml` auf die neue Adresse
-setzen — sonst zeigen Sitemap, RSS-Feed und absolute Links weiterhin auf
-`wikipeiredia-393f3.web.app`. Die Projekt-ID in `.firebaserc` bleibt dabei
+setzen. Die Projekt-ID in `.firebaserc` bleibt dabei
 unverändert: Sie sagt, *wohin* deployed wird, die `baseURL` sagt, *unter
 welcher Adresse* die Seite erreichbar ist.
 
