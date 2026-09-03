@@ -6,7 +6,7 @@ Quellcode der Doku-/Wiki-Website. Die Seiten sind Markdown-Dateien unter
 
 | | |
 |---|---|
-| **Live** | https://wikipeiredia.web.app |
+| **Live** | https://wikipeiredia-393f3.web.app |
 | **Theme** | [Relearn](https://mcshelby.github.io/hugo-theme-relearn/) 9.0.3 (Git-Submodule) |
 | **Hugo** | extended, ab 0.141 — die CI baut mit 0.165.0 |
 | **Deploy** | automatisch bei jedem Push auf `main` |
@@ -18,8 +18,8 @@ Quellcode der Doku-/Wiki-Website. Die Seiten sind Markdown-Dateien unter
  ┌──────────────┐          ┌──────────────────┐         ┌───────────────┐
  │ content/*.md │          │  Push auf main   │         │   Hosting     │
  │ hugo.toml    │─ push ──▶│        │         │         │               │
- │ themes/      │          │        ▼         │         │  wikipeiredia │
- │  (Submodule) │          │  Actions:        │         │   .web.app    │
+ │ themes/      │          │        ▼         │         │ wikipeiredia- │
+ │  (Submodule) │          │  Actions:        │         │ 393f3.web.app │
  └──────┬───────┘          │   checkout       │         └───────▲───────┘
         │                  │   hugo --minify  │                 │
     make dev               │   → public/      │                 │
@@ -83,13 +83,22 @@ Wie Seiten geschrieben werden, steht im Wiki selbst unter
 
 Damit der automatische Deploy funktioniert, sind drei Dinge nötig:
 
-**1. Firebase-Projekt anlegen**
+**1. Firebase-Projekt**
 
-In der [Firebase Console](https://console.firebase.google.com/) ein Projekt
-mit der ID `wikipeiredia` erstellen und darin **Hosting** aktivieren.
-Heißt das Projekt anders, müssen die ID in `.firebaserc`, das Feld
-`projectId` in `.github/workflows/deploy.yml` und die `baseURL` in
-`hugo.toml` entsprechend angepasst werden.
+Angelegt und mit aktiviertem Hosting: **`wikipeiredia-393f3`**.
+
+Die Projekt-ID steht im Repo an **genau einer Stelle** — in `.firebaserc`. Der
+Deploy-Workflow gibt bewusst keine ID vor, sondern übernimmt sie von dort. Bei
+einem Projektwechsel ist also nur diese eine Datei anzupassen.
+
+Die ID muss zum hinterlegten Dienstkonto passen. Nachsehen lässt sie sich im
+Feld `project_id` der Dienstkonto-JSON oder in der Firebase Console unter
+⚙️ Projekteinstellungen → Allgemein.
+
+> Nicht die Projekt-ID raten: Weicht sie vom tatsächlichen Projekt ab, schlägt
+> der Deploy mit `403 PERMISSION_DENIED` fehl. Zeigt sie auf ein *gelöschtes*
+> Projekt, hilft auch Neuanlegen nicht — Google sperrt die IDs gelöschter
+> Projekte dauerhaft, sie lassen sich nie wieder vergeben.
 
 **2. Dienstkonto-Schlüssel erzeugen**
 
@@ -139,7 +148,9 @@ Details und Alternativen stehen im Wiki unter
 Domain in der Firebase Console unter **Hosting → Eigene Domain hinzufügen**
 verbinden, anschließend die `baseURL` in `hugo.toml` auf die neue Adresse
 setzen — sonst zeigen Sitemap, RSS-Feed und absolute Links weiterhin auf
-`wikipeiredia.web.app`.
+`wikipeiredia-393f3.web.app`. Die Projekt-ID in `.firebaserc` bleibt dabei
+unverändert: Sie sagt, *wohin* deployed wird, die `baseURL` sagt, *unter
+welcher Adresse* die Seite erreichbar ist.
 
 ## Theme aktualisieren
 

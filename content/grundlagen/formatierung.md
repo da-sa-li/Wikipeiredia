@@ -66,7 +66,7 @@ flowchart LR
     A[Markdown in content/] --> B[Hugo Build]
     B --> C[public/]
     C --> D[Firebase Hosting]
-    D --> E[wikipeiredia.web.app]
+    D --> E[wikipeiredia-393f3.web.app]
 ```
 
 ## Textauszeichnung

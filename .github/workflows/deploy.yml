@@ -51,5 +51,6 @@ jobs:
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          projectId: wikipeiredia
+          # Kein projectId hier — die Action nimmt die ID aus .firebaserc.
+          # So steht sie an genau einer Stelle im Repo.
           channelId: live
