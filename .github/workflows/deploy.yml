@@ -46,11 +46,21 @@ jobs:
           TZ: Europe/Berlin
         run: ./scripts/check-build.sh
 
+      # Die ID wird aus .firebaserc abgeleitet statt hier wiederholt: eine
+      # Quelle der Wahrheit, und die Action kann trotzdem ihren Ergebnis-Link
+      # bauen (ohne projectId zeigt ihre Zusammenfassung auf https://.web.app/).
+      - name: Projekt-ID aus .firebaserc lesen
+        id: firebase
+        run: |
+          set -euo pipefail
+          PROJECT_ID="$(jq -er '.projects.default' .firebaserc)"
+          echo "Firebase-Projekt: $PROJECT_ID"
+          echo "project_id=$PROJECT_ID" >> "$GITHUB_OUTPUT"
+
       - name: Auf Firebase Hosting veröffentlichen
         uses: FirebaseExtended/action-hosting-deploy@v0.11.0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          # Kein projectId hier — die Action nimmt die ID aus .firebaserc.
-          # So steht sie an genau einer Stelle im Repo.
+          projectId: ${{ steps.firebase.outputs.project_id }}
           channelId: live
