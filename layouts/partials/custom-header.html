@@ -1,0 +1,16 @@
+{{- /*
+  Steuert, ob Suchmaschinen diese Seite in ihren Index aufnehmen dürfen.
+
+  Schalter:
+    hugo.toml  →  [params] noindex = true   (gilt für die gesamte Website)
+    Front Matter →      noindex = true      (gilt nur für diese eine Seite)
+
+  Die Seiteneinstellung hat Vorrang vor der Website-Einstellung.
+*/ -}}
+{{- $noindex := site.Params.noindex | default false -}}
+{{- if isset .Params "noindex" -}}
+  {{- $noindex = .Params.noindex -}}
+{{- end -}}
+{{- if $noindex }}
+<meta name="robots" content="noindex, nofollow">
+{{- end }}

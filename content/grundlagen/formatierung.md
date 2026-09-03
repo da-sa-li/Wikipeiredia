@@ -5,8 +5,6 @@ weight = 2
 tags = ['markdown', 'referenz']
 +++
 
-# Formatierung
-
 Neben normalem Markdown stehen die Bausteine des Relearn-Themes zur
 Verfügung. Diese Seite zeigt die wichtigsten — sie ist bewusst als
 Spickzettel gedacht.

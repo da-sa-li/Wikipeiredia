@@ -66,6 +66,8 @@ make clean         Build-Artefakte entfernen
 │   ├── anleitungen/
 │   └── referenz/
 ├── archetypes/           Vorlagen für „make new“
+├── layouts/              Eigene Ergänzungen am Theme (robots.txt, head)
+├── scripts/              Build-Prüfung, von Makefile und CI gemeinsam genutzt
 ├── static/               Dateien, die unverändert ausgeliefert werden
 ├── themes/…relearn/      Theme als Submodule, auf Tag 9.0.3 festgenagelt
 ├── hugo.toml             Hugo- und Theme-Konfiguration
@@ -118,6 +120,20 @@ npx firebase-tools login
 make deploy
 ```
 
+## Sichtbarkeit für Suchmaschinen
+
+Standardmäßig darf die Website indiziert werden. Umstellen in `hugo.toml`:
+
+```toml
+[params]
+  noindex = true   # robots.txt sperrt alles + noindex-Meta-Tag auf jeder Seite
+```
+
+Einzelne Seiten lassen sich über `noindex = true` in ihrem Front Matter
+ausnehmen. Das ist eine Bitte an Suchmaschinen, **kein Zugriffsschutz** —
+Details und Alternativen stehen im Wiki unter
+**Anleitungen → Sichtbarkeit für Suchmaschinen**.
+
 ## Eigene Domain
 
 Domain in der Firebase Console unter **Hosting → Eigene Domain hinzufügen**
@@ -139,3 +155,20 @@ git commit -m "Theme auf Relearn <neuer-tag> aktualisiert"
 
 Der [Changelog des Themes](https://github.com/McShelby/hugo-theme-relearn/blob/main/CHANGELOG.md)
 nennt bei größeren Sprüngen die nötigen Anpassungen an `hugo.toml`.
+
+### Bekannte Einschränkung: Abkündigungswarnungen
+
+Relearn 9.0.3 verwendet noch vier Template-Funktionen, die Hugo in 0.156
+bzw. 0.158 abgekündigt hat (`.Language.LanguageCode`,
+`.Language.LanguageDirection`, `site.Sites`, `site.Languages`). Sie
+funktionieren weiterhin, erzeugen aber Warnungen — Hugos `--panicOnWarning`
+ist deshalb hier nicht nutzbar.
+
+`scripts/check-build.sh` löst das: Es duldet genau diese
+Abkündigungswarnungen und lässt den Build bei **jeder anderen** Warnung
+fehlschlagen. Sobald Relearn nachzieht, kann das Skript entfallen und
+`hugo --gc --minify --panicOnWarning` direkt verwendet werden.
+
+Unabhängig davon brechen kaputte interne Links und fehlende Bilder den Build
+immer ab — dafür sorgen `link.errorlevel` und `image.errorlevel` in
+`hugo.toml`.

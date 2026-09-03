@@ -3,8 +3,6 @@ title = 'Wikipeiredia'
 type = 'home'
 +++
 
-# Wikipeiredia
-
 Willkommen im Wiki. Hier sammeln wir Dokumentation, Anleitungen und
 Nachschlagewerke an einem Ort — versioniert in Git, durchsuchbar im Browser.
 

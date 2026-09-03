@@ -21,6 +21,9 @@ timeZone = 'Europe/Berlin'
 
 theme = 'hugo-theme-relearn'
 
+# robots.txt erzeugen (Inhalt steuert der Schalter 'noindex' weiter unten).
+enableRobotsTXT = true
+
 # "Zuletzt geändert"-Datum aus der Git-Historie statt aus dem Front Matter.
 # Wichtig: Der CI-Build braucht dafür die volle Historie (fetch-depth: 0).
 enableGitInfo = true
@@ -80,6 +83,18 @@ summaryLength = 10
 # Theme-Parameter
 # =============================================================================
 [params]
+  # --- Sichtbarkeit für Suchmaschinen ----------------------------------------
+  # false = Suchmaschinen dürfen die Seite indizieren (Normalfall).
+  # true  = robots.txt sperrt alles und jede Seite bekommt zusätzlich
+  #         <meta name="robots" content="noindex, nofollow">.
+  #
+  # Einzelne Seiten lassen sich unabhängig davon über 'noindex = true'
+  # in ihrem Front Matter ausnehmen.
+  #
+  # Achtung: Das ist eine Bitte an Suchmaschinen, kein Zugriffsschutz —
+  # wer die Adresse kennt, kann die Seite weiterhin aufrufen.
+  noindex = false
+
   # --- Erscheinungsbild ------------------------------------------------------
   # Erste Variante ist die Voreinstellung; 'relearn-auto' folgt der
   # Systemeinstellung des Besuchers. Über das Zahnrad in der Seitenleiste
@@ -94,6 +109,12 @@ summaryLength = 10
 
   landingPageName = '<i class="fa-fw fas fa-home"></i> Startseite'
   titleSeparator = '·'
+
+  # Relearn hängt sonst an jeden internen Link "index.html" an, damit die
+  # Seite auch direkt vom Dateisystem aus funktioniert. Beim Hosting führt
+  # das zu zwei Adressen pro Seite (/thema/ und /thema/index.html) und
+  # kollidiert mit trailingSlash in firebase.json.
+  disableExplicitIndexURLs = true
 
   # --- Navigation ------------------------------------------------------------
   collapsibleMenu = true      # Seitenleiste als aufklappbarer Baum
@@ -112,7 +133,10 @@ summaryLength = 10
   disableSourceButton = true   # Markdown-Quelltext nicht zusätzlich ausliefern
 
   # --- Metadaten unter dem Seitentitel ---------------------------------------
-  hideAuthorName  = false
+  # Angezeigt wird nur das Änderungsdatum. Der Name käme aus dem letzten
+  # Git-Commit — das ist nicht zwingend die Person, die den Text verfasst hat.
+  # Wer den letzten Bearbeiter dennoch anzeigen will: auf false setzen.
+  hideAuthorName  = true
   hideAuthorEmail = true
   hideAuthorDate  = false
   dateFormat      = ':date_long'   # z. B. "3. September 2026"

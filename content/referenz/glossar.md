@@ -5,8 +5,6 @@ weight = 1
 tags = ['referenz']
 +++
 
-# Glossar
-
 **Front Matter**
 : Der Konfigurationsblock zwischen `+++` am Anfang jeder Markdown-Datei.
   Steuert Titel, Reihenfolge, Schlagwörter und Sichtbarkeit einer Seite.

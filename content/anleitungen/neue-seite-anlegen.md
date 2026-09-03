@@ -5,8 +5,6 @@ weight = 1
 tags = ['anleitung', 'schreiben']
 +++
 
-# Neue Seite anlegen
-
 Es gibt zwei Wege — direkt im Browser oder lokal mit Vorschau.
 
 ## Im Browser

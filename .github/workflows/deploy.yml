@@ -40,11 +40,11 @@ jobs:
           sudo dpkg -i /tmp/hugo.deb
           hugo version
 
-      - name: Website bauen
+      - name: Website bauen und prüfen
         env:
           HUGO_ENVIRONMENT: production
           TZ: Europe/Berlin
-        run: hugo --gc --minify --panicOnWarning
+        run: ./scripts/check-build.sh
 
       - name: Auf Firebase Hosting veröffentlichen
         uses: FirebaseExtended/action-hosting-deploy@v0.11.0

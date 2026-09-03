@@ -1,9 +1,11 @@
 +++
 title = 'Referenz'
+description = 'Nachschlagewerke: Begriffe, Tabellen, Übersichten.'
 type = 'chapter'
 weight = 30
 +++
 
-Nachschlagewerke: Begriffe, Tabellen, Übersichten.
+Zum Nachschlagen statt zum Durchlesen: Begriffe, Tabellen und
+Übersichten.
 
 {{% children depth="2" description="true" %}}

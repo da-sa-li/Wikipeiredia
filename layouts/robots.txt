@@ -1,0 +1,10 @@
+{{- /* Gegenstück zum noindex-Schalter in hugo.toml. */ -}}
+{{- if site.Params.noindex -}}
+User-agent: *
+Disallow: /
+{{- else -}}
+User-agent: *
+Allow: /
+
+Sitemap: {{ "sitemap.xml" | absURL }}
+{{- end -}}

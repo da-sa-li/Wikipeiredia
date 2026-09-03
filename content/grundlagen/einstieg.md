@@ -5,8 +5,6 @@ weight = 1
 tags = ['einstieg']
 +++
 
-# Einstieg
-
 Dieses Wiki ist eine statische Website: Aus Markdown-Dateien im Ordner
 `content/` erzeugt [Hugo](https://gohugo.io/) fertiges HTML, das auf
 Firebase Hosting ausgeliefert wird. Es gibt keine Datenbank und kein
