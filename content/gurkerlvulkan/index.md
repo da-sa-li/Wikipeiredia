@@ -7,7 +7,7 @@ Der **Gurkerlvulkan** ist ein Naturspektakel aus dem Eferdinger Becken. Er wird 
 
 ![gurkerlvulkan.png](/gurkerlvulkan.png)
 
-Er wurde am 15. Juli 2024 von [Markus Peireder](/peireder) erfunden.
+Er wurde am 15. Juli 2024 von [Markus Peireder](/markus-peireder) erfunden.
 
 Die Erstbesteigung des Gurkerlvulkans erfolgte am 7. August 2024 durch Fofo.
 

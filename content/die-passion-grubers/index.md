@@ -19,7 +19,7 @@ Im Folgenden werden die einzelnen Stationen genauer beschrieben:
 # IV. Er begegnet seiner Mutter Alexandra
 ![kreuzweg_04.jpg](/kreuzweg_04.jpg)
 
-# V. [Markus von Zyrene](/peireder) half ihm das Kreuz zu tragen
+# V. [Markus von Zyrene](/markus-peireder) half ihm das Kreuz zu tragen
 ![kreuzweg_05.jpg](/kreuzweg_05.jpg)
 
 # VI. Hanna reicht ihm das Schweißtuch

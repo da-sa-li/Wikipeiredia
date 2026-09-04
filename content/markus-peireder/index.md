@@ -28,9 +28,9 @@ Weltweite Anerkennung wurde ihm durch sein emotionales Cover von [Ram Ranch](/ra
 
 Er hat es mit der Wurst, er hat es am Steckerl, er hat es mit den Nudeln, er hat es herauspaniert, er hat es auf der Pizza, ein Püree hat er auch gemacht :cucumber:
 
-Die Leibspeise von Markus Peireder sind übermäßig scharfe Instantnudeln. Dazu genießt er gern einen Liter Milch, oder zwei. Er gehört zu den wenigen Personen, deren Verdauung in der Lage ist, 100 % der aufgenommenen Nährstoffe zu Schwefelwasserstoff zu verarbeiten. Aber auch leichterer Kost, wie etwa einem [Nusspüree mit Dill](/rezepte/npd) ist er nicht abgeneigt. Als Vorspeise sollte man Leberwurstbrotsuppe servieren.
+Die Leibspeise von Markus Peireder sind übermäßig scharfe Instantnudeln. Dazu genießt er gern einen Liter Milch, oder zwei. Er gehört zu den wenigen Personen, deren Verdauung in der Lage ist, 100 % der aufgenommenen Nährstoffe zu Schwefelwasserstoff zu verarbeiten. Aber auch leichterer Kost, wie etwa einem Nusspüree mit Dill ist er nicht abgeneigt. Als Vorspeise sollte man Leberwurstbrotsuppe servieren.
 
-Im Juli 2024 erfand Mr. P den, von [Acidgurkerl](/Acidgurkerl) inspirierten, [Gurkerlvulkan](/gurkerl-vulkan). Im August des gleichen Jahres entfalteten sich die ersten Ideen eines [Gurkerltrichters](/Gurkerltrichter).
+Im Juli 2024 erfand Mr. P den, von [Acidgurkerl](/Acidgurkerl) inspirierten, [Gurkerlvulkan](/gurkerlvulkan). Im August des gleichen Jahres entfalteten sich die ersten Ideen eines [Gurkerltrichters](/Gurkerltrichter).
 
 ### Butterhaserl
 Im September 2024 belegte Markus beim Internationalen Steirischen Grübewerb mit seinem Butterhaserl den ersten Platz in der Kategorie *Einfachstes Gericht der Welt (ohne Kernöl)*.
@@ -41,7 +41,7 @@ Im September 2024 belegte Markus beim Internationalen Steirischen Grübewerb mit
 Eine Gruppe Peireder-Cosplayer in [NonCon](/noncon)-T-Shirts. Welcher ist der Echte?
 
 ## Athletische Karriere
-Er ist ein begeisterer Sternsteinbergabläufer. Nennenswert ist weiters seine Tätigkeit als [Kreuzträger](/passion-gruber#markus-von-zyrene-half-ihm-das-kreuz-zu-tragen).
+Er ist ein begeisterer Sternsteinbergabläufer. Nennenswert ist weiters seine Tätigkeit als [Kreuzträger](/die-passion-grubers#markus-von-zyrene-half-ihm-das-kreuz-zu-tragen).
 
 Bei den [olympischen Sommerspielen 2024 in Paris](https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2024) erreichte Markus Peireder zufällig den 4. Platz beim 800m Lauf der Herren, als er eine flüchtende [Joggerin](/joggerin) durch das Stade de France verfolgte.
 

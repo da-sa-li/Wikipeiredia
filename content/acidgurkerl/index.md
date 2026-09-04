@@ -4,7 +4,7 @@ description = 'A botzn Explosion für die Geschmacksnerven.'
 +++
 
 **Acidgurkerl** sind eine botzn Explosion für die Geschmacksnerven.
-Ein berühmt berüchtigter Acidgurkal Connaisseur ist [Markus Peireder](/peireder)
+Ein berühmt berüchtigter Acidgurkal Connaisseur ist [Markus Peireder](/markus-peireder)
 In seltenen Fällen wachsen auch ganze Gläser Acidgurkal auf der sogenannten [Efkostaudn](/Efkostaudn).
 ## Rezept
 ### Zutaten
