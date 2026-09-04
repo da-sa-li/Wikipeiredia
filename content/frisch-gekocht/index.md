@@ -1,6 +1,7 @@
 +++
 title = 'Frisch gekocht'
 description = 'Mit Andi & Alex.'
+tags = ['Stermann', 'Grissemann', 'Frisch gekocht']
 +++
 
 Alle Rezepte von Ihrem Lieblingsfress- und Saufkanal - dem ORF - hier zum Nachkochen.

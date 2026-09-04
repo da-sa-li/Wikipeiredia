@@ -1,6 +1,7 @@
 +++
 title = 'Ie'
 description = 'Wie verblödet ist das deutsche Volk?'
+tags = ['Stermann', 'Grissemann', 'Küche']
 +++
 
 Das **Ie** ist das Produkt der deutschen Henne.

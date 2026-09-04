@@ -1,6 +1,7 @@
 +++
 title = 'Efkonstantin Gurkenthaler'
 description = 'Evil Gurkerl'
+tags = ['Albanien', 'Efko', 'Gurkerl']
 +++
 
 **Efkonstantin Gurkenthaler** *a.k.a. "Evil Gurkerl"* ist professioneller Reisebegleiter und einer von zwei Hauptbegleitern der Balkanreise 2024.</br></br>

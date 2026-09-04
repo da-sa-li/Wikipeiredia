@@ -1,6 +1,7 @@
 +++
 title = 'Joggerin'
 description = 'Ich berufe mich auf mein Aussageverweigerungsrecht.'
+tags = ['Joggerin']
 +++
 
 Die **Joggerin** *(Homo sapiens currans feminius)* ist eine Unterart des [weiblichen Menschen](https://de.wikipedia.org/wiki/Frau) *(Homo sapiens)*. Sie ist hauptsächlich in Europa und Nordamerika beheimatet.

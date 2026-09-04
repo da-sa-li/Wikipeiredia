@@ -1,6 +1,7 @@
 +++
 title = 'Erste Österreichische Gurkerlrepublik'
 description = 'Wir fressen die Gurkerl.'
+tags = ['Efko', 'Gurkerl']
 +++
 
 Die **Erste Österreichische Gurkerlrepublik** wurde am 3. März 2024 ausgerufen.

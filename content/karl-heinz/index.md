@@ -1,6 +1,7 @@
 +++
 title = 'Karl-Heinz'
 description = 'Der beste Lawinenspürhund aus dem unteren Tiroler Oberland.'
+tags = ['Stermann', 'Grissemann']
 +++
 
 **Karl-Heinz** ($\dag$ 14.12.2006) war ein männlicher Lawinenspürhund vom Patscherkofel.

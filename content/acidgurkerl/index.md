@@ -1,6 +1,7 @@
 +++
 title = 'Acidgurkerl'
 description = 'A botzn Explosion für die Geschmacksnerven.'
+tags = ['Gurkerl', 'Küche']
 +++
 
 **Acidgurkerl** sind eine botzn Explosion für die Geschmacksnerven.

@@ -1,6 +1,7 @@
 +++
 title = 'Gurkerltrichter'
 description = 'I friss de Gurkerl.'
+tags = ['Gurkerl']
 +++
 
 **Gurkerltrichtern** feine Art des Konsumierens von kleinen mit Acid versetzten Gurkal durch einen Trichter mit Schlauch. 

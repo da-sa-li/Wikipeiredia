@@ -1,6 +1,7 @@
 +++
 title = 'NPD'
 description = 'Nusspüree mit Dill'
+tags = ['Stermann', 'Grissemann', 'Küche']
 +++
 
 Das **Nusspüree mit Dill** ist ein Gericht der deutschen Küche.
