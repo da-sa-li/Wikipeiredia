@@ -56,10 +56,10 @@ Zum Zeitpunkt seines Todes war er komplett abgesandelt, schließlich hatte er nu
 
 {{< tabs >}}
 {{% tab title="Peire-da" %}}
- ![peire-da.jpg](/peire-da.jpg)
+![peire-da.jpg](/peire-da.jpg)
 {{% /tab %}}
 {{% tab title="Peire-ned-da" %}}
- ![peire-ned-da.jpg](/peire-ned-da.jpg)
+![peire-ned-da.jpg](/peire-ned-da.jpg)
 {{% /tab %}}
 {{< /tabs >}}
 
