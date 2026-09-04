@@ -1,3 +1,8 @@
++++
+title = 'Erste Österreichische Gurkerlrepublik'
+description = 'Wir fressen die Gurkerl.'
++++
+
 Die **Erste Österreichische Gurkerlrepublik** wurde am 3. März 2024 ausgerufen.
 
 # Wahlkampf

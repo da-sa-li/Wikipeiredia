@@ -1,3 +1,8 @@
++++
+title = 'Tom Turbo und der große Gurkenwahnsinn'
+description = 'Detektive! Kennt ihr die Antwort?'
++++
+
 **Tom Turbo und der große Gurkenwahnsinn** (auch bekannt als Tom Turbo und der gurkige Größenwahnsinn) ist eine erstunkene und erlogene Parodie des österreichischen Kinder- und Jugendbuchautors, Drehbuchautors, Fernsehmoderators und Produzenten T. Brezina.
 
 Thomas B. bediente sich der hinterhältigen Methode der Resynchronisation um das [originale Kunstwerk](https://youtu.be/cNBWwmm5dJk?si=9w_CBIVmkW_eO4S9) in ein schiefes Licht zu rücken.

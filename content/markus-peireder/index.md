@@ -1,3 +1,8 @@
++++
+title = 'Markus Peireder'
+description = 'braucht keine Beschreibung'
++++
+
 **Markus** Johann **Peireder** von Zyrene *a.k.a. "Butterfly Johnny"* (* 02.10.1996, $\dag$ 26.08.2024 in internationalen Gewässern im [Golf von Italobanien](/golf-von-italobanien)) ist ein oberösterreichischer Chemiker, [Pyrotechniker](/peirogerd) und Musiker des 21. Jahrhunderts. Berüchtigt ist P für seine Intoleranz [^intoleranz].
 
 ## Frühes Leben

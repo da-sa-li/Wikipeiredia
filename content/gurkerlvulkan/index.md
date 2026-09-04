@@ -1,3 +1,8 @@
++++
+title = 'Gurkerlvulkan'
+description = 'Das achte Weltwunder.'
++++
+
 Der **Gurkerlvulkan** ist ein Naturspektakel aus dem Eferdinger Becken. Er wird auch als das achte Weltwunder bezeichnet.
 
 ![gurkerlvulkan.png](/gurkerlvulkan.png)

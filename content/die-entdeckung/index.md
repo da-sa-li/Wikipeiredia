@@ -1,3 +1,7 @@
++++
+title = 'Die Entdeckung'
++++
+
 # Die Entdeckung
 Am 02. Oktober des Jahres 2024 nach Efko Gristi entdeckte [Markus Peireder](/peireder) die Aufschrift seines Lebens. Verfasst wurde diese von seinen Agurkaln nach seinem Ableben im [Golf von Italobanien](/golf-von-italobanien). 
 Seine Geschichte wird die Menschheit noch für weitere Gurkunderte prägen und formen. 

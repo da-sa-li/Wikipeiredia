@@ -1,3 +1,8 @@
++++
+title = 'Go, go, for fuck's sake!'
+description = 'go, go for fuck's sake!'
++++
+
 Die beliebte Redensart **Go, go, for fuck's sake** ist eine Aufforderung die Fahrbahn zu räumen und weiterzufahren.
 
 # Entstehung

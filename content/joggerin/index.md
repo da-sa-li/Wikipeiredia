@@ -1,3 +1,8 @@
++++
+title = 'Joggerin'
+description = 'Ich berufe mich auf mein Aussageverweigerungsrecht.'
++++
+
 Die **Joggerin** *(Homo sapiens currans feminius)* ist eine Unterart des [weiblichen Menschen](https://de.wikipedia.org/wiki/Frau) *(Homo sapiens)*. Sie ist hauptsächlich in Europa und Nordamerika beheimatet.
 Das auszeichnende Merkmal dieser Art ist die andauernde Fortbewegung im Lauftempo. Die Joggerin stellt das wichtigste Beutetier für [Markus Peireder](/peireder) dar.
 

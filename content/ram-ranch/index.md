@@ -1,3 +1,7 @@
++++
+title = 'Ram Ranch'
++++
+
 # Lyrics
 18 naked cowboys in the showers at Ram Ranch!
 Big, hard, throbbing cocks wanting to be sucked!

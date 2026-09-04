@@ -1,3 +1,8 @@
++++
+title = 'Die Passion Grubers'
+description = 'Spaxts eam aufe.'
++++
+
 Die **Passion Grubers** beschreibt das Ende von Gruber.
 
 Im Folgenden werden die einzelnen Stationen genauer beschrieben:
