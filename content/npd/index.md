@@ -26,6 +26,7 @@ Man nehme:
 1. Einen Ernst-Röhm-Topf aufsetzen
 1. Die gemölzerte Nuss mit dem Dill in das Püree rühren
 
+> [!tip]
 > Zum NPD serviert man einen Saft vom deutschen Apfel oder von der Strachebeere.
 
 # Weblinks

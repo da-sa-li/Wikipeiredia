@@ -19,4 +19,4 @@ Alle Zutaten gut miteinander vermischen, fertig ist das gute Zeug.
 Neben des puren Konsums, können diese sich auch durch einen [Gurkerltrichter](/Gurkerltrichter) einverleiben lassen. 
 
 ## Literatur
-<p><a class="is-external-link" href="https://youtu.be/cNBWwmm5dJk?si=9w_CBIVmkW_eO4S9">Acidgurkerl</a></p>
+[Acidgurkerl](https://youtu.be/cNBWwmm5dJk?si=9w_CBIVmkW_eO4S9)

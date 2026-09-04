@@ -11,9 +11,9 @@ tags = ['Albanien', 'Efko', 'Gurkerl']
   <figcaption>Efkonstantin am Start der Balkanreise 2024</figcaption>
 </figure>
 
-![efkonstantin_anfang.jpeg](/efkonstantin_anfang.jpg)
+![Efkonstatin ist ein wütendes Gurkerl.](/efkonstantin_anfang.jpg)
 
-![Efkonstantin hat ein Auto gestohlen](/efkonstantin_ende.jpg)
+![Efkonstantin hat ein Auto gestohlen.](/efkonstantin_ende.jpg)
 Efkonstantin am Ende der Balkanreise 2024
 
 # Talisman
