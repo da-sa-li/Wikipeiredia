@@ -1,5 +1,5 @@
 +++
-title = 'SChere, Stein, Joggerin'
+title = 'Schere, Stein, Joggerin'
 description = 'Ein Gesellschaftsspiel.'
 +++
 
