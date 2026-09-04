@@ -11,13 +11,18 @@ description = 'Not a con(?)'
 
 In seinen jungen Jahren wurde der kleine Peireder in einem Liftcrash-Kurs [^kurs] aufgeklärt.
 
-# Bildergalerie {.tabset}
-## Markus
+# Bildergalerie
+{{< tabs title="Bildergalerie" >}}
+{{% tab title="Markus" %}}
 ![Noncon-Markus](/noncon.jpeg)
-## Torte
+{{% /tab %}}
+{{% tab title="Torte" %}}
 ![Noncon-Torte](/torte.jpeg)
-## Kola
+{{% /tab %}}
+{{% tab title="Kola" %}}
 ![NonCon-Kola](/kola.jpeg)
+{{% /tab %}}
+{{< /tabs >}}
 
 [^kurs]: Ein Liftcrash-Kurs ist sehr teuer, weil dabei Lifte gecrashed werden. Ein handelsüblicher Personenaufzug kostet etwa 30'000 Euro.
 
