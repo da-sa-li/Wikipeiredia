@@ -11,3 +11,5 @@ type = 'home'
 ## Navigation
 
 {{% children depth="2" description="true" %}}
+
+![brezina.webp]
