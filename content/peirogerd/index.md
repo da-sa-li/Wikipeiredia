@@ -1,6 +1,6 @@
 +++
 title = 'Peirogerd'
-description = 'Tret's de Tia ein.'
+description = 'Tret´s de Tia ein.'
 +++
 
 Ein **Peirogerd**, auch als Pyrogerd bekannt, ist ein Verbrechen gegen die Menschlichkeit. Bei einem Peirogerd handelt es sich um ein lichtscheues Wesen, welches in absoluter Dunkelheit totale Zerstörung verursacht.
