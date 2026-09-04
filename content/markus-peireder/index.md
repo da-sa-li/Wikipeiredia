@@ -41,7 +41,7 @@ Im September 2024 belegte Markus beim Internationalen Steirischen Grübewerb mit
 Eine Gruppe Peireder-Cosplayer in [NonCon](/noncon)-T-Shirts. Welcher ist der Echte?
 
 ## Athletische Karriere
-Er ist ein begeisterer Sternsteinbergabläufer. Nennenswert ist weiters seine Tätigkeit als [Kreuzträger](/die-passion-grubers#markus-von-zyrene-half-ihm-das-kreuz-zu-tragen).
+Er ist ein begeisterer Sternsteinbergabläufer. Nennenswert ist weiters seine Tätigkeit als [Kreuzträger](/die-passion-grubers).
 
 Bei den [olympischen Sommerspielen 2024 in Paris](https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2024) erreichte Markus Peireder zufällig den 4. Platz beim 800m Lauf der Herren, als er eine flüchtende [Joggerin](/joggerin) durch das Stade de France verfolgte.
 
