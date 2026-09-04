@@ -13,11 +13,11 @@ In seinen jungen Jahren wurde der kleine Peireder in einem Liftcrash-Kurs [^kurs
 
 # Bildergalerie {.tabset}
 ## Markus
-![noncon.jpeg](/noncon.jpeg =70%x)
+![Noncon-Markus](/noncon.jpeg)
 ## Torte
-![torte.jpeg](/torte.jpeg =70%x)
+![Noncon-Torte](/torte.jpeg)
 ## Kola
-![kola.jpeg](/kola.jpeg =70%x)
+![NonCon-Kola](/kola.jpeg)
 
 [^kurs]: Ein Liftcrash-Kurs ist sehr teuer, weil dabei Lifte gecrashed werden. Ein handelsüblicher Personenaufzug kostet etwa 30'000 Euro.
 

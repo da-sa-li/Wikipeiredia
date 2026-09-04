@@ -44,7 +44,7 @@ Man nehme:
 1. Das Haserl auf den Grill hauen.
 1. Das Haserl mit etwas Absinth besprengen.
 
-![butterhaserl_markus.jpeg](/butterhaserl_markus.jpeg =50%x)
+![Butterhaserl von Markus](/butterhaserl_markus.jpeg)
 
 # Crème brûléeber
 

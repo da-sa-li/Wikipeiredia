@@ -9,7 +9,7 @@ description = 'braucht keine Beschreibung'
 Er wurde einmal geboren. Über den weiteren Verlauf seiner Kindheit ist nichts bekannt. Vermutlich war da auch nichts.
 
 Zwar kein Kind, aber gleichermaßen ungeschickt war er in seiner Funktion als stellvertretender Chefarchitekt des ersten Ennser Raclettegrills.
-![raclette.jpeg](/raclette.jpeg =70%x)
+![Ein Raclette nach Ennser Art](/raclette.jpeg)
 
 ### Schulische Laufbahn
 Markus Peireder saß in der Anstalt[^anstalt], welche er nach sechs Jahren[^ehrenrunde] mit Erfolg abschloss. Im Rahmen seiner HTL-Diplomarbeit bekam er es mit der [entfesselten Zerstörung](/peirogerd) zu tun.
@@ -23,8 +23,8 @@ Weltweite Anerkennung wurde ihm durch sein emotionales Cover von [Ram Ranch](/ra
 
 ## Kulinarik
 
+> [!warning]
 > Dieser Abschnitt ist nicht hinreichend mit Belegen (beispielsweise Einzelnachweisen) ausgestattet. Angaben ohne ausreichenden Beleg könnten demnächst entfernt werden.
-{.is-warning}
 
 Er hat es mit der Wurst, er hat es am Steckerl, er hat es mit den Nudeln, er hat es herauspaniert, er hat es auf der Pizza, ein Püree hat er auch gemacht :cucumber:
 
@@ -34,7 +34,7 @@ Im Juli 2024 erfand Mr. P den, von [Acidgurkerl](/Acidgurkerl) inspirierten, [Gu
 
 ### Butterhaserl
 Im September 2024 belegte Markus beim Internationalen Steirischen Grübewerb mit seinem Butterhaserl den ersten Platz in der Kategorie *Einfachstes Gericht der Welt (ohne Kernöl)*.
-![butterhaserl_markus.jpeg](/butterhaserl_markus.jpeg =70%x)
+![Ein Butterhaserl](/butterhaserl_markus.jpeg)
 
 ## Künstlerische Rezeption
 ![peireder-cosplay.jpg](/peireder-cosplay.jpg)
@@ -55,10 +55,10 @@ Zum Zeitpunkt seines Todes war er komplett abgesandelt, schließlich hatte er nu
 ### Visualisierung {.tabset}
 
 #### Peire-da
-![peire-da.jpg](/peire-da.jpg =70%x)
+![peire-da.jpg](/peire-da.jpg)
 
 #### Peire-ned-da
-![peire-ned-da.jpg](/peire-ned-da.jpg =70%x)
+![peire-ned-da.jpg](/peire-ned-da.jpg)
 
 ## Siehe auch
 * [Joggerinnen](/joggerin)
