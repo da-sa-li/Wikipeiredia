@@ -12,7 +12,7 @@ description = 'Not a con(?)'
 In seinen jungen Jahren wurde der kleine Peireder in einem Liftcrash-Kurs [^kurs] aufgeklärt.
 
 # Bildergalerie
-{{< tabs title="Bildergalerie" >}}
+{{< tabs >}}
 {{% tab title="Markus" %}}
 ![Noncon-Markus](/noncon.jpeg)
 {{% /tab %}}

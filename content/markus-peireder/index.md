@@ -52,13 +52,16 @@ Leider fiel Markus Peireder von einer Fähre am Weg über den [italobanischen Go
 Zum Zeitpunkt seines Todes war er komplett abgesandelt, schließlich hatte er nur eine Hose für zwei Wochen.
 
 ## Effekte
-### Visualisierung {.tabset}
+### Visualisierung
 
-#### Peire-da
-![peire-da.jpg](/peire-da.jpg)
-
-#### Peire-ned-da
-![peire-ned-da.jpg](/peire-ned-da.jpg)
+{{< tabs >}}
+{{% tab title="Peire-da" %}}
+ ![peire-da.jpg](/peire-da.jpg)
+{{% /tab %}}
+{{% tab title="Peire-ned-da" %}}
+ ![peire-ned-da.jpg](/peire-ned-da.jpg)
+{{% /tab %}}
+{{< /tabs >}}
 
 ## Siehe auch
 * [Joggerinnen](/joggerin)
