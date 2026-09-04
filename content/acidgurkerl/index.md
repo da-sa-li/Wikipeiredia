@@ -10,7 +10,7 @@ In seltenen Fällen wachsen auch ganze Gläser Acidgurkal auf der sogenannten [E
 ## Rezept
 ### Zutaten
 * Gurkerl
-* ¾ Acid
+* ¾ l Acid
 
 ### Herstellung
 Alle Zutaten gut miteinander vermischen, fertig ist das gute Zeug.
