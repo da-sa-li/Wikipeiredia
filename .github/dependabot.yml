@@ -8,12 +8,12 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "0 19 20 * *"
+      cronjob: "0 19 20 * *"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "0 5 19 * *"
+      cronjob: "0 5 19 * *"
   - package-ecosystem: "gitsubmodule"
     directory: "/"
     schedule:
-      interval: "0 2 4 * *"
+      cronjob: "0 2 4 * *"
