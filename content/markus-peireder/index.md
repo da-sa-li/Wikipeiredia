@@ -28,7 +28,7 @@ Weltweite Anerkennung wurde ihm durch sein emotionales Cover von [Ram Ranch](/ra
 
 Er hat es mit der Wurst, er hat es am Steckerl, er hat es mit den Nudeln, er hat es herauspaniert, er hat es auf der Pizza, ein Püree hat er auch gemacht :cucumber:
 
-Die Leibspeise von Markus Peireder sind übermäßig scharfe Instantnudeln. Dazu genießt er gern einen Liter Milch, oder zwei. Er gehört zu den wenigen Personen, deren Verdauung in der Lage ist, 100 % der aufgenommenen Nährstoffe zu Schwefelwasserstoff zu verarbeiten. Aber auch leichterer Kost, wie etwa einem [Nusspüree mit Dill](/npd) ist er nicht abgeneigt. Als Vorspeise sollte man [Leberwurstbrotsuppe](/frisch-gekocht/leberwurstbrotsuppe) servieren.
+Die Leibspeise von Markus Peireder sind übermäßig scharfe Instantnudeln. Dazu genießt er gern einen Liter Milch, oder zwei. Er gehört zu den wenigen Personen, deren Verdauung in der Lage ist, 100 % der aufgenommenen Nährstoffe zu Schwefelwasserstoff zu verarbeiten. Aber auch leichterer Kost, wie etwa einem [Nusspüree mit Dill](/npd) ist er nicht abgeneigt. Als Vorspeise sollte man [Leberwurstbrotsuppe](/frisch-gekocht#leberwurstbrotsuppe) servieren.
 
 Im Juli 2024 erfand Mr. P den, von [Acidgurkerl](/Acidgurkerl) inspirierten, [Gurkerlvulkan](/gurkerlvulkan). Im August des gleichen Jahres entfalteten sich die ersten Ideen eines [Gurkerltrichters](/Gurkerltrichter).
 
