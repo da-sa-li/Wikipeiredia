@@ -8,23 +8,23 @@ Quellcode der Doku-/Wiki-Website. Die Seiten sind Markdown-Dateien unter
 |---|---|
 | **Live** | https://wikipeiredia-393f3.web.app |
 | **Theme** | [Relearn](https://mcshelby.github.io/hugo-theme-relearn/) 9.0.3 (Git-Submodule) |
-| **Hugo** | extended, ab 0.141 — die CI baut mit 0.165.0 |
+| **Hugo** | extended, ab 0.141 — die CI baut mit 0.169.0 |
 | **Deploy** | automatisch bei jedem Push auf `main` |
 
 ## Wie es zusammenhängt
 
 ```
    LOKAL                        GITHUB                       FIREBASE
- ┌──────────────┐          ┌──────────────────┐         ┌───────────────┐
- │ content/*.md │          │  Push auf main   │         │   Hosting     │
- │ hugo.toml    │─ push ──▶│        │         │         │               │
- │ themes/      │          │        ▼         │         │ wikipeiredia- │
- │  (Submodule) │          │  Actions:        │         │ 393f3.web.app │
- └──────┬───────┘          │   checkout       │         └───────▲───────┘
-        │                  │   hugo --minify  │                 │
-    make dev               │   → public/      │                 │
-        │                  │   deploy ────────┼─────────────────┘
-        ▼                  └──────────────────┘  Auth über Secret
+ ┌──────────────┐           ┌──────────────────┐         ┌───────────────┐
+ │ content/*.md │           │  Push auf main   │         │   Hosting     │
+ │ hugo.toml    │─ push ──> │        │         │         │               │
+ │ themes/      │           │        ▼         │         │ wikipeiredia- │
+ │  (Submodule) │           │  Actions:        │         │ 393f3.web.app │
+ └──────┬───────┘           │   checkout       │         └───────▲───────┘
+        │                   │   hugo --minify  │                 │
+    make dev                │   → public/      │                 │
+        │                   │   deploy ────────┼─────────────────┘
+        ▼                   └──────────────────┘  Auth über Secret
    localhost:1313                                FIREBASE_SERVICE_ACCOUNT
 ```
 

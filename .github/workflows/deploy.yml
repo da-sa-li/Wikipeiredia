@@ -15,7 +15,7 @@ permissions:
   contents: read
 
 env:
-  HUGO_VERSION: 0.165.0
+  HUGO_VERSION: 0.169.0
 
 jobs:
   deploy:
