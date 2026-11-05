@@ -10,6 +10,6 @@ type = 'home'
 
 ## Navigation
 
-{{% children depth="2" description="true" %}}
+{{% pages description="true" display="tree" levels="2" %}}
 
 ![brezina.webp]
