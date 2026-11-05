@@ -27,8 +27,8 @@ dev: theme ## Vorschau auf http://localhost:1313 (zeigt auch Entwürfe)
 build: theme ## Website nach public/ bauen
 	$(HUGO) --gc --minify
 
-check: theme ## Bauen und die Ausgabe streng prüfen (wie in der CI)
-	HUGO=$(HUGO) ./scripts/check-build.sh
+check: theme ## Bauen, jede Warnung gilt als Fehler (wie in der CI)
+	$(HUGO) --gc --minify --panicOnWarning
 
 new: ## Neue Seite anlegen — make new t=ordner/seitenname
 	@test -n "$(t)" || { echo "Aufruf: make new t=ordner/seitenname"; exit 1; }

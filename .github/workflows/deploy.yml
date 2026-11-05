@@ -49,7 +49,7 @@ jobs:
         env:
           HUGO_ENVIRONMENT: production
           TZ: Europe/Berlin
-        run: ./scripts/check-build.sh
+        run: hugo --gc --minify --panicOnWarning
 
       # Die ID wird aus .firebaserc abgeleitet statt hier wiederholt: eine
       # Quelle der Wahrheit, und die Action kann trotzdem ihren Ergebnis-Link

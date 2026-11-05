@@ -67,7 +67,6 @@ make clean         Build-Artefakte entfernen
 │   └── referenz/
 ├── archetypes/           Vorlagen für „make new“
 ├── layouts/              Eigene Ergänzungen am Theme (robots.txt, head)
-├── scripts/              Build-Prüfung, von Makefile und CI gemeinsam genutzt
 ├── static/               Dateien, die unverändert ausgeliefert werden
 ├── themes/…relearn/      Theme als Submodule, auf Tag 9.0.3 festgenagelt
 ├── hugo.toml             Hugo- und Theme-Konfiguration
@@ -166,18 +165,12 @@ git commit -m "Theme auf Relearn <neuer-tag> aktualisiert"
 Der [Changelog des Themes](https://github.com/McShelby/hugo-theme-relearn/blob/main/CHANGELOG.md)
 nennt bei größeren Sprüngen die nötigen Anpassungen an `hugo.toml`.
 
-### Bekannte Einschränkung: Abkündigungswarnungen
+### Strenge Build-Prüfung
 
-Relearn 9.0.3 verwendet noch vier Template-Funktionen, die Hugo in 0.156
-bzw. 0.158 abgekündigt hat (`.Language.LanguageCode`,
-`.Language.LanguageDirection`, `site.Sites`, `site.Languages`). Sie
-funktionieren weiterhin, erzeugen aber Warnungen — Hugos `--panicOnWarning`
-ist deshalb hier nicht nutzbar.
-
-`scripts/check-build.sh` löst das: Es duldet genau diese
-Abkündigungswarnungen und lässt den Build bei **jeder anderen** Warnung
-fehlschlagen. Sobald Relearn nachzieht, kann das Skript entfallen und
-`hugo --gc --minify --panicOnWarning` direkt verwendet werden.
+`make check` (und die CI) bauen mit `hugo --gc --minify --panicOnWarning`:
+**Jede** Warnung lässt den Build fehlschlagen, auch Abkündigungen durch Hugo
+oder das Theme. Bricht der Build nach einem Theme- oder Hugo-Update ab, zeigt
+die Warnung meist direkt, was zu ändern ist.
 
 Unabhängig davon brechen kaputte interne Links und fehlende Bilder den Build
 immer ab — dafür sorgen `link.errorlevel` und `image.errorlevel` in
