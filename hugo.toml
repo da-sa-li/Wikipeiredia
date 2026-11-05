@@ -16,8 +16,8 @@ title = 'Wikipeiredia'
 # Das Wiki ist einsprachig deutsch. Relearn bringt deutsche Oberflächentexte
 # (themes/hugo-theme-relearn/i18n/de.toml) automatisch mit.
 defaultContentLanguage = 'de'
-locale = 'de-DE'          # seit Hugo 0.158 der Nachfolger von 'languageCode'
-timeZone = 'Europe/Berlin'
+locale = 'de-AT'          # seit Hugo 0.158 der Nachfolger von 'languageCode'
+timeZone = 'Europe/Vienna'
 
 theme = 'hugo-theme-relearn'
 
