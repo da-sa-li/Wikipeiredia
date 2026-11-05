@@ -93,7 +93,7 @@ summaryLength = 10
   #
   # Achtung: Das ist eine Bitte an Suchmaschinen, kein Zugriffsschutz —
   # wer die Adresse kennt, kann die Seite weiterhin aufrufen.
-  noindex = false
+  noindex = true
 
   # --- Erscheinungsbild ------------------------------------------------------
   # Erste Variante ist die Voreinstellung; 'relearn-auto' folgt der
