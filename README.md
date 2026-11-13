@@ -2,11 +2,11 @@
 
 Quellcode der Doku-/Wiki-Website. Die Seiten sind Markdown-Dateien unter
 `content/`, gebaut wird mit [Hugo](https://gohugo.io/), ausgeliefert über
-[Firebase Hosting](https://firebase.google.com/docs/hosting).
+[GitHub Pages](https://docs.github.com/pages).
 
 | | |
 |---|---|
-| **Live** | https://wikipeiredia-393f3.web.app |
+| **Live** | https://wiki.fertigs.bike |
 | **Theme** | [Relearn](https://mcshelby.github.io/hugo-theme-relearn/) 9.0.3 (Git-Submodule) |
 | **Hugo** | extended, ab 0.141 — die CI baut mit 0.169.0 |
 | **Deploy** | automatisch bei jedem Push auf `main` |
@@ -14,18 +14,18 @@ Quellcode der Doku-/Wiki-Website. Die Seiten sind Markdown-Dateien unter
 ## Wie es zusammenhängt
 
 ```
-   LOKAL                        GITHUB                       FIREBASE
- ┌──────────────┐           ┌──────────────────┐         ┌───────────────┐
- │ content/*.md │           │  Push auf main   │         │   Hosting     │
- │ hugo.toml    │─ push ──> │        │         │         │               │
- │ themes/      │           │        ▼         │         │ wikipeiredia- │
- │  (Submodule) │           │  Actions:        │         │ 393f3.web.app │
- └──────┬───────┘           │   checkout       │         └───────▲───────┘
-        │                   │   hugo --minify  │                 │
-    make dev                │   → public/      │                 │
-        │                   │   deploy ────────┼─────────────────┘
-        ▼                   └──────────────────┘  Auth über Secret
-   localhost:1313                                FIREBASE_SERVICE_ACCOUNT
+   LOKAL                        GITHUB
+ ┌──────────────┐           ┌──────────────────┐
+ │ content/*.md │           │  Push auf main   │
+ │ hugo.toml    │─ push ──> │        │         │
+ │ themes/      │           │        ▼         │
+ │  (Submodule) │           │  Actions:        │      wiki.fertigs.bike
+ └──────┬───────┘           │   checkout       │
+        │                   │   hugo --minify  │      ┌──────────────┐
+    make dev                │   → public/      │      │ GitHub Pages │
+        │                   │   deploy ────────┼────> │              │
+        ▼                   └──────────────────┘      └──────────────┘
+   localhost:1313
 ```
 
 ## Lokal loslegen
@@ -53,7 +53,6 @@ make build         Website nach public/ bauen
 make check         Bauen, wobei jede Warnung als Fehler gilt (wie in der CI)
 make new t=…       Neue Seite anlegen, z. B. make new t=anleitungen/backup
 make new-chapter t=…  Neues Kapitel anlegen, z. B. make new-chapter t=betrieb
-make deploy        Bauen und von Hand veröffentlichen
 make clean         Build-Artefakte entfernen
 ```
 
@@ -67,11 +66,9 @@ make clean         Build-Artefakte entfernen
 │   └── referenz/
 ├── archetypes/           Vorlagen für „make new“
 ├── layouts/              Eigene Ergänzungen am Theme (robots.txt, head)
-├── static/               Dateien, die unverändert ausgeliefert werden
+├── static/               Dateien, die unverändert ausgeliefert werden (inkl. CNAME)
 ├── themes/…relearn/      Theme als Submodule, auf Tag 9.0.3 festgenagelt
 ├── hugo.toml             Hugo- und Theme-Konfiguration
-├── firebase.json         Hosting: Verzeichnis, Caching, Header
-├── .firebaserc           Firebase-Projekt-ID
 └── .github/workflows/    Build- und Deploy-Automatik
 ```
 
@@ -80,53 +77,23 @@ Wie Seiten geschrieben werden, steht im Wiki selbst unter
 
 ## Einmalige Einrichtung des Deployments
 
-Damit der automatische Deploy funktioniert, sind drei Dinge nötig:
+Es sind keine Secrets nötig, die Anmeldung übernimmt GitHub selbst.
 
-**1. Firebase-Projekt**
+**1. Pages aktivieren**
 
-Angelegt und mit aktiviertem Hosting: **`wikipeiredia-393f3`**.
+Im Repository unter **Settings → Pages → Build and deployment → Source**
+den Eintrag **GitHub Actions** wählen.
 
-Die Projekt-ID steht im Repo an **genau einer Stelle** — in `.firebaserc`. Der
-Deploy-Workflow gibt bewusst keine ID vor, sondern übernimmt sie von dort. Bei
-einem Projektwechsel ist also nur diese eine Datei anzupassen.
+**2. Eigene Domain eintragen**
 
-Die ID muss zum hinterlegten Dienstkonto passen. Nachsehen lässt sie sich im
-Feld `project_id` der Dienstkonto-JSON oder in der Firebase Console unter
-⚙️ Projekteinstellungen → Allgemein.
-
-> Nicht die Projekt-ID raten: Weicht sie vom tatsächlichen Projekt ab, schlägt
-> der Deploy mit `403 PERMISSION_DENIED` fehl. Zeigt sie auf ein *gelöschtes*
-> Projekt, hilft auch Neuanlegen nicht — Google sperrt die IDs gelöschter
-> Projekte dauerhaft, sie lassen sich nie wieder vergeben.
-
-**2. Dienstkonto-Schlüssel erzeugen**
-
-Firebase Console → ⚙️ **Projekteinstellungen** → **Dienstkonten** →
-**Neuen privaten Schlüssel generieren**. Es wird eine JSON-Datei
-heruntergeladen.
-
-**3. Schlüssel als GitHub-Secret hinterlegen**
-
-Im Repository unter **Settings → Secrets and variables → Actions →
-New repository secret**:
-
-* Name: `FIREBASE_SERVICE_ACCOUNT`
-* Wert: der **komplette** Inhalt der JSON-Datei
-
-> Die JSON-Datei ist ein Zugangsschlüssel. Sie gehört nicht ins Repository —
-> nur ins Secret.
+Unter **Settings → Pages → Custom domain** `wiki.fertigs.bike` eintragen
+(die Datei `static/CNAME` hält die Domain zusätzlich im Repo fest). Beim
+DNS-Anbieter muss der Eintrag `wiki` als **CNAME** auf `da-sa-li.github.io`
+zeigen; bisher zeigte er auf Firebase. Danach **Enforce HTTPS** aktivieren,
+sobald das Zertifikat bereitsteht (das kann einige Minuten dauern).
 
 Danach veröffentlicht jeder Push auf `main` die Seite automatisch. Ein Deploy
 lässt sich zusätzlich jederzeit im Tab **Actions** von Hand auslösen.
-
-### Von Hand veröffentlichen
-
-Alternativ direkt vom eigenen Rechner, dafür wird Node benötigt:
-
-```bash
-npx firebase-tools login
-make deploy
-```
 
 ## Sichtbarkeit für Suchmaschinen
 
@@ -142,13 +109,10 @@ ausnehmen. Das ist eine Bitte an Suchmaschinen, **kein Zugriffsschutz** —
 Details und Alternativen stehen im Wiki unter
 **Anleitungen → Sichtbarkeit für Suchmaschinen**.
 
-## Eigene Domain
+## Domain ändern
 
-Domain in der Firebase Console unter **Hosting → Eigene Domain hinzufügen**
-verbinden, anschließend die `baseURL` in `hugo.toml` auf die neue Adresse
-setzen. Die Projekt-ID in `.firebaserc` bleibt dabei
-unverändert: Sie sagt, *wohin* deployed wird, die `baseURL` sagt, *unter
-welcher Adresse* die Seite erreichbar ist.
+Neue Adresse in `static/CNAME`, in der `baseURL` von `hugo.toml` und unter
+**Settings → Pages → Custom domain** eintragen und den DNS-Eintrag anpassen.
 
 ## Theme aktualisieren
 
