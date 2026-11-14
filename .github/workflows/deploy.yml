@@ -1,4 +1,4 @@
-name: Deploy auf Firebase Hosting
+name: Deploy auf GitHub Pages
 
 on:
   push:
@@ -8,20 +8,19 @@ on:
 
 # Nie zwei Deploys gleichzeitig; ein laufender wird zu Ende geführt.
 concurrency:
-  group: firebase-hosting-live
+  group: pages
   cancel-in-progress: false
-
-permissions:
-  contents: read
 
 env:
   HUGO_VERSION: 0.169.0
 
 jobs:
-  deploy:
-    name: Bauen und veröffentlichen
+  build:
+    name: Bauen
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: read
 
     steps:
       - name: Repository auschecken
@@ -45,27 +44,31 @@ jobs:
           sudo dpkg -i /tmp/hugo.deb
           hugo version
 
+      # Die baseURL kommt aus hugo.toml (eigene Domain), nicht von Pages.
       - name: Website bauen und prüfen
         env:
           HUGO_ENVIRONMENT: production
           TZ: Europe/Berlin
         run: hugo --gc --minify --panicOnWarning
 
-      # Die ID wird aus .firebaserc abgeleitet statt hier wiederholt: eine
-      # Quelle der Wahrheit, und die Action kann trotzdem ihren Ergebnis-Link
-      # bauen (ohne projectId zeigt ihre Zusammenfassung auf https://.web.app/).
-      - name: Projekt-ID aus .firebaserc lesen
-        id: firebase
-        run: |
-          set -euo pipefail
-          PROJECT_ID="$(jq -er '.projects.default' .firebaserc)"
-          echo "Firebase-Projekt: $PROJECT_ID"
-          echo "project_id=$PROJECT_ID" >> "$GITHUB_OUTPUT"
-
-      - name: Auf Firebase Hosting veröffentlichen
-        uses: FirebaseExtended/action-hosting-deploy@v0.11.0
+      - name: Pages-Artefakt hochladen
+        uses: actions/upload-pages-artifact@v3
         with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          projectId: ${{ steps.firebase.outputs.project_id }}
-          channelId: live
+          path: public
+
+  deploy:
+    name: Veröffentlichen
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write      # Deploy auf Pages
+      id-token: write   # Herkunft des Artefakts prüfen
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Auf GitHub Pages veröffentlichen
+        id: deployment
+        uses: actions/deploy-pages@v4

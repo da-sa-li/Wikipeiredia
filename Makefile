@@ -5,7 +5,7 @@
 HUGO ?= hugo
 
 .DEFAULT_GOAL := help
-.PHONY: help theme dev build check new new-chapter deploy clean
+.PHONY: help theme dev build check new new-chapter clean
 
 help: ## Diese Übersicht anzeigen
 	@echo "Wikipeiredia — verfügbare Befehle:"
@@ -37,9 +37,6 @@ new: ## Neue Seite anlegen — make new t=ordner/seitenname
 new-chapter: ## Neues Kapitel anlegen — make new-chapter t=ordnername
 	@test -n "$(t)" || { echo "Aufruf: make new-chapter t=ordnername"; exit 1; }
 	$(HUGO) new content/$(t)/_index.md --kind chapter
-
-deploy: build ## Bauen und auf Firebase Hosting veröffentlichen
-	npx --yes firebase-tools deploy --only hosting
 
 clean: ## Build-Artefakte entfernen
 	rm -rf public resources/_gen .hugo_build.lock

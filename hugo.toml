@@ -7,7 +7,7 @@
 # =============================================================================
 
 # Öffentliche Adresse der Seite. Bei eigener Domain hier anpassen
-# (und die Domain zusätzlich in der Firebase Console verbinden).
+# (und die Domain in static/CNAME sowie in den GitHub-Pages-Einstellungen eintragen).
 baseURL = 'https://wiki.fertigs.bike/'
 
 title = 'Wikipeiredia'
@@ -112,8 +112,7 @@ summaryLength = 10
 
   # Relearn hängt sonst an jeden internen Link "index.html" an, damit die
   # Seite auch direkt vom Dateisystem aus funktioniert. Beim Hosting führt
-  # das zu zwei Adressen pro Seite (/thema/ und /thema/index.html) und
-  # kollidiert mit trailingSlash in firebase.json.
+  # das zu zwei Adressen pro Seite (/thema/ und /thema/index.html).
   disableExplicitIndexURLs = true
 
   # --- Navigation ------------------------------------------------------------
